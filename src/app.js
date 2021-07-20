@@ -10,6 +10,7 @@ const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
 const app = express()
+const PORT = process.env.PORT || 3000
 
 // Setup static directory
 app.use(express.static(staticDirectoryPath))
@@ -62,7 +63,7 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Server is up on port 3000')
 })
 

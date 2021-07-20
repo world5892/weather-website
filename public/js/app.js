@@ -12,7 +12,7 @@ const showWeather = (e) => {
 
   const address = weatherInput.value
 
-  fetch(`http://localhost:3000/weather?address=${address}`)
+  fetch(`/weather?address=${address}`)
     .then(response => response.json())
     .then(data => {
       if (data.error) {
