@@ -22,6 +22,8 @@ const showWeather = (e) => {
       messageOne.textContent = data.location
       messageTwo.textContent = `${data.description}. It is currently ${data.temperature} degrees.`
     })
+
+  weatherInput.value = ''
 }
 
 weatherForm.addEventListener('submit', showWeather)
